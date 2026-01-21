@@ -1,0 +1,7 @@
+path: . # Veri setini indirdiğin ana dizin
+train: train/images
+val: val/images
+test: test/images
+
+nc: 1
+names: ["y_bitki"]
