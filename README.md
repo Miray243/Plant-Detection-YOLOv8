@@ -24,8 +24,6 @@ Plant-Detection-YOLOv8/
 │   └── images/
 ├── dataset1.yaml
 ├── main.py
-├── yolov8n.pt
-├── yolov8m.pt
 └── README.md
 🛠 Installation
 Clone the repository:
@@ -40,13 +38,15 @@ Bash
 
 pip install ultralytics
 🚀 Usage
-To start training the model using the default Nano model, run the main.py script.
+To start training the model, run the main.py script.
 
 Bash
 
 python main.py
 Configuration
 The dataset1.yaml file is configured to use relative paths. It expects the dataset folders (train, test, val) to be located in the same directory as the script.
+
+dataset1.yaml configuration:
 
 YAML
 
@@ -57,16 +57,9 @@ test: test/images
 
 nc: 1
 names: ["y_bitki"]
-⚙️ Model Selection (Optional)
-By default, the script uses YOLOv8 Nano (yolov8n.pt) for faster training. If you require higher accuracy, this repository also includes the YOLOv8 Medium (yolov8m.pt) model.
-
-To use the Medium model:
-
-Open main.py.
-
-Change the line model = YOLO('yolov8n.pt') to model = YOLO('yolov8m.pt').
-
 📊 Model Details
+Architecture: YOLOv8 Nano (yolov8n.pt)
+
 Task: Object Detection
 
 Classes: y_bitki (Plant)
